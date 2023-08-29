@@ -27,7 +27,9 @@ export default function LocationInfo({
       <InfoRow
         data-testid="location-views"
         icon={ViewsSvg}
-        infoNode={`${locationOpenCount} views`}
+        infoNode={`${locationOpenCount} ${
+          locationOpenCount === 1 ? 'View' : 'Views'
+        }`}
       />
     </>
   );

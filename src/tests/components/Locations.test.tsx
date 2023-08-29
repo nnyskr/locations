@@ -78,16 +78,16 @@ describe('LocationsPage', () => {
 
     const firstLocationItem = screen.getByTestId('location-item-1');
     expect(getViewCountElementWithin(firstLocationItem).textContent).toEqual(
-      '0 views'
+      '0 Views'
     );
 
     fireEvent.click(firstLocationItem);
 
     expect(getViewCountElementWithin(firstLocationItem).textContent).toEqual(
-      '1 views'
+      '1 Views'
     );
     const dialog = await screen.findByTestId('location-dialog-1');
-    expect(getViewCountElementWithin(dialog).textContent).toEqual('1 views');
+    expect(getViewCountElementWithin(dialog).textContent).toEqual('1 Views');
 
     expect(dialog).toBeInTheDocument();
 

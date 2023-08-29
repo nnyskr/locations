@@ -11,7 +11,7 @@
   margin: auto;
   padding: 1em;
   max-height: 63vh;
-  max-width: 86vw;
+  max-width: var(--dialog-max-width);
   background: #ffffff;
   display: none;
   border: 0;
@@ -36,6 +36,6 @@
 
 @media screen and (min-width: 1200px) {
   :root {
-    --locations-grid-column: 52vw;
+    --dialog-max-width: 52vw;
   }
 }

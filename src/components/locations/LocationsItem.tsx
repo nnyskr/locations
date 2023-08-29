@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { isNotNil } from 'ramda';
 import { LocationSchema } from './store/types';
@@ -8,7 +9,7 @@ import LocationInfo from './LocationInfo';
 import { actions } from './store/reducers';
 import * as selectors from './store/selectors';
 
-export default function LocationsItem({
+export default memo(function LocationsItem({
   id,
   name,
   userCount,
@@ -44,7 +45,7 @@ export default function LocationsItem({
       onClick={handleLocationClick}
       onKeyDown={handleLocationKeyDown}
     >
-      <div className="typography-l ellipsis">{name}</div>
+      <div className="typography-l ellipsis location-item__name">{name}</div>
       {isNotNil(locationOpenCount) && (
         <LocationInfo
           userCount={userCount}
@@ -58,4 +59,4 @@ export default function LocationsItem({
       </RoundButton>
     </div>
   );
-}
+});

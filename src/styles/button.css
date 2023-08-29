@@ -1,0 +1,15 @@
+.button {
+  height: 32px;
+  background: #37b24d;
+  border-radius: 16px;
+  border: none;
+  padding: 4px 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button:not([disabled]):hover,
+.button:not([disabled]):focus,
+.button:not([disabled]):active {
+  background-color: #177334;
+}

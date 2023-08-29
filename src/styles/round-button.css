@@ -1,0 +1,27 @@
+.round-button {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.round-button:not([disabled]):hover,
+.round-button:not([disabled]):focus,
+.round-button:not([disabled]):active {
+  background-color: #efefef;
+}
+
+.round-button > img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.4;
+}
+
+.round-button > img {
+  opacity: 0.62;
+}

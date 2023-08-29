@@ -1,0 +1,8 @@
+.locations-container {
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(var(--locations-grid-column), 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 25px;
+  padding: 25px var(--locations-container-padding-horizontal);
+}

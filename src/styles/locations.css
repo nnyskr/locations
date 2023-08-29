@@ -1,0 +1,10 @@
+.locations-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.locations-loading-message {
+  margin-top: 30px;
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+.location-dialog {
+  width: 440px;
+  padding: 0;
+}
+
+.location-dialog__header {
+  padding: 15px 20px 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-dialog__info {
+  padding: 15px 25px 20px 25px;
+}
+
+.location-dialog__description {
+  padding: 0 25px 15px 25px;
+}
+
+.location-dialog__footer {
+  padding: 10px 25px;
+  display: flex;
+}
+
+.location-dialog__footer .button {
+  margin-left: auto;
+}

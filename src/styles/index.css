@@ -1,0 +1,87 @@
+:root {
+  --locations-grid-column: 1;
+  --locations-container-padding-horizontal: 30px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #001122;
+}
+
+p {
+  margin: 0;
+}
+
+.typography-xl {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.typography-l {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.typography-m {
+  font-size: 16px;
+  line-height: 14px;
+}
+
+.typography-m2 {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.typography-s {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.color-grey {
+  color: rgba(0, 17, 34, 0.3);
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header {
+  border-bottom: solid 1px #eeeeee;
+  padding: 19px 30px 20px 30px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 760px) {
+  :root {
+    --locations-grid-column: 2;
+    --locations-container-padding-horizontal: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --locations-grid-column: 3;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --locations-grid-column: 4;
+  }
+}
+
+@media screen and (min-width: 1760px) {
+  :root {
+    --locations-grid-column: 5;
+  }
+}

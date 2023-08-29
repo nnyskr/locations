@@ -22,6 +22,10 @@
   background-color: #f6f6f6;
 }
 
+.location-item__name {
+  margin-bottom: 5px;
+}
+
 .location-item__edit-button {
   position: absolute;
   top: 10px;

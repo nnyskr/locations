@@ -22,6 +22,10 @@ export default memo(function LocationsItem({
   const openLocation = (payload: { id: string }) =>
     dispatch(actions.openLocation(payload));
 
+  function handleLocationTouchEnd(event: React.TouchEvent<HTMLDivElement>) {
+    openLocation({ id });
+  }
+
   function handleLocationClick(event?: React.MouseEvent<HTMLDivElement>) {
     openLocation({ id });
   }
@@ -29,7 +33,7 @@ export default memo(function LocationsItem({
   function handleLocationKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
     if (event.key === 'Enter') {
       event.preventDefault();
-      handleLocationClick();
+      openLocation({ id });
     }
   }
 
@@ -41,7 +45,8 @@ export default memo(function LocationsItem({
       role="button"
       aria-label="Open location"
       onClick={handleLocationClick}
-      // onKeyDown={handleLocationKeyDown}
+      onKeyDown={handleLocationKeyDown}
+      onTouchEnd={handleLocationTouchEnd}
     >
       <div className="typography-l ellipsis location-item__name">{name}</div>
       {isNotNil(locationOpenCount) && (

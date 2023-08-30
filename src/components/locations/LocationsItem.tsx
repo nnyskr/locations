@@ -30,22 +30,13 @@ export default memo(function LocationsItem({
     openLocation({ id });
   }
 
-  function handleLocationKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      openLocation({ id });
-    }
-  }
-
   return (
     <div
       className="location-item"
       data-testid={`location-item-${id}`}
-      tabIndex={0}
       role="button"
       aria-label="Open location"
       onClick={handleLocationClick}
-      onKeyDown={handleLocationKeyDown}
       onTouchEnd={handleLocationTouchEnd}
     >
       <div className="typography-l ellipsis location-item__name">{name}</div>

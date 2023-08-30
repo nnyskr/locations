@@ -22,22 +22,26 @@ export default memo(function LocationsItem({
   const openLocation = (payload: { id: string }) =>
     dispatch(actions.openLocation(payload));
 
-  function handleLocationTouchEnd(event: React.TouchEvent<HTMLDivElement>) {
-    openLocation({ id });
-  }
-
   function handleLocationClick(event?: React.MouseEvent<HTMLDivElement>) {
     openLocation({ id });
   }
+
+  // function handleLocationKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
+  //   if (event.key === 'Enter') {
+  //     event.preventDefault();
+  //     openLocation({ id });
+  //   }
+  // }
 
   return (
     <div
       className="location-item"
       data-testid={`location-item-${id}`}
+      // tabIndex={0}
       role="button"
       aria-label="Open location"
       onClick={handleLocationClick}
-      onTouchEnd={handleLocationTouchEnd}
+      // onKeyDown={handleLocationKeyDown}
     >
       <div className="typography-l ellipsis location-item__name">{name}</div>
       {isNotNil(locationOpenCount) && (

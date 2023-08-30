@@ -53,7 +53,7 @@ export default memo(function LocationsItem({
       )}
 
       <RoundButton className="location-item__edit-button">
-        <img src={EditSvg} />
+        <img alt="edit" src={EditSvg} />
       </RoundButton>
     </div>
   );

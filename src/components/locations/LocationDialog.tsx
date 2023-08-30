@@ -39,7 +39,7 @@ export default function LocationDialog() {
             autoFocus={undefined}
             onClick={handleDoneClick}
           >
-            <img src={CloseSvg} />
+            <img alt="close" src={CloseSvg} />
           </RoundButton>
         </div>
         {!!openLocation && isNotNil(locationOpenCount) && (

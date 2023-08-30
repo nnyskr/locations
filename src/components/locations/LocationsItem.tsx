@@ -23,9 +23,7 @@ export default memo(function LocationsItem({
     dispatch(actions.openLocation(payload));
 
   function handleLocationClick(event?: React.MouseEvent<HTMLDivElement>) {
-    if (!event || !window?.getSelection()?.toString()) {
-      openLocation({ id });
-    }
+    openLocation({ id });
   }
 
   function handleLocationKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {

@@ -41,7 +41,7 @@ export default memo(function LocationsItem({
       role="button"
       aria-label="Open location"
       onClick={handleLocationClick}
-      onKeyDown={handleLocationKeyDown}
+      // onKeyDown={handleLocationKeyDown}
     >
       <div className="typography-l ellipsis location-item__name">{name}</div>
       {isNotNil(locationOpenCount) && (
